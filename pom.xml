@@ -6,7 +6,7 @@
 	<artifactId>OpenInv</artifactId>
 	<version>1.0.0</version>
 	<name>OpenInv</name>
-	<description>Implement /echest command in Nukkit!</description>
+	<description>Implement command echest in Nukkit!</description>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
