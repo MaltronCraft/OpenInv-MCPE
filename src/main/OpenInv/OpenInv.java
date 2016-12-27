@@ -1,4 +1,4 @@
-package nycuro;
+package OpenInv;
 
 import cn.nukkit.plugin.PluginBase;
 import cn.nukkit.utils.TextFormat;
@@ -13,7 +13,7 @@ import cn.nukkit.entity.EntityHumanType;
 import cn.nukkit.inventory.Inventory;
 import cn.nukkit.inventory.PlayerEnderChestInventory;
 
-public class EChest extends PluginBase {
+public class OpenInv extends PluginBase {
 
     @Override
     public void onLoad() {
@@ -38,8 +38,6 @@ public class EChest extends PluginBase {
 			Player player = (Player) sender;
 			Inventory eci = player.getBlockEnderChest();
 			player.openInventory(eci);
-		} else {
-			return false;
 		}
 		default:
 			return false;
