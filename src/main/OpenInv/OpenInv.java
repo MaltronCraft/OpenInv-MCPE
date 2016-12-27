@@ -7,11 +7,9 @@ import cn.nukkit.command.CommandSender;
 import cn.nukkit.command.CommandExecutor;
 
 import cn.nukkit.Player;
-import cn.nukkit.block.BlockEnderChest;
-import cn.nukkit.entity.EntityHuman;
-import cn.nukkit.entity.EntityHumanType;
-import cn.nukkit.inventory.Inventory;
-import cn.nukkit.inventory.PlayerEnderChestInventory;
+
+import cn.nukkit.blockentity.BlockEntity;
+import cn.nukkit.blockentity.BlockEntityEnderChest;
 
 public class OpenInv extends PluginBase {
 
@@ -34,11 +32,8 @@ public class OpenInv extends PluginBase {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         switch (command.getName()) {
             case "echest":
-                if (sender instanceof Player) {
-			Player player = (Player) sender;
-			Inventory eci = player.getBlockEnderChest();
-			player.openInventory(eci);
-		}
+		Player player = (Player) sender;
+		player.addWindow(player.getEnderChestInventory());
 		default:
 			return false;
 	}
