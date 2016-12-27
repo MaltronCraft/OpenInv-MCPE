@@ -1,0 +1,10 @@
+checkout:
+  post:
+    - git submodule sync
+    - git submodule update --init
+    - mvn package
+    - cp -R ./target/EChest-1.0.0.jar $CIRCLE_ARTIFACTS
+
+machine:
+  java:
+    version: oraclejdk8
