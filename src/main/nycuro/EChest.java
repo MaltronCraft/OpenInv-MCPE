@@ -6,7 +6,14 @@ import cn.nukkit.command.Command;
 import cn.nukkit.command.CommandSender;
 import cn.nukkit.command.CommandExecutor;
 
-public class MainClass extends PluginBase {
+import cn.nukkit.Player;
+import cn.nukkit.block.BlockEnderChest;
+import cn.nukkit.entity.EntityHuman;
+import cn.nukkit.entity.EntityHumanType;
+import cn.nukkit.inventory.Inventory;
+import cn.nukkit.inventory.PlayerEnderChestInventory;
+
+public class EChest extends PluginBase {
 
     @Override
     public void onLoad() {
@@ -27,9 +34,15 @@ public class MainClass extends PluginBase {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         switch (command.getName()) {
             case "echest":
-			return true;
+                if (sender instanceof Player) {
+			Player player = (Player) sender;
+			Inventory eci = player.getBlockEnderChest();
+			player.openInventory(eci);
+		} else {
+			return false;
+		}
 		default:
 			return false;
 	}
-  }
+    }
 }
