@@ -1,7 +1,7 @@
 checkout:
   post:
     - mvn package
-    - cp -R ./target/EChest-1.0.0.jar $CIRCLE_ARTIFACTS
+    - cp -R ./target/OpenInv-1.0.0.jar $CIRCLE_ARTIFACTS
 
 machine:
   java:
