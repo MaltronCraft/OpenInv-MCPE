@@ -34,8 +34,9 @@ public class OpenInv extends PluginBase {
             case "echest":
 		Player player = (Player) sender;
 		player.addWindow(player.getEnderChestInventory());
-		default:
-			return false;
+		return true;
+            default:
+		return false;
 	}
     }
 }
