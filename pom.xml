@@ -34,8 +34,8 @@
 	</dependencies>
 	<repositories>
 		<repository>
-			<id>nukkit-repo</id>
-			<url>http://ci.regularbox.com/plugin/repository/everything/</url>
+			<id>nukkitx-repo</id>
+			<url>http://repo.nukkitx.com/main/</url>
 		</repository>
 	</repositories>
 	<build>
